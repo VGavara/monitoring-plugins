@@ -1,5 +1,5 @@
 # Nagios compatible monitoring plugins
-![License:](https://img.shields.io/github/license/vgavara/ArduinoTB6612FNG)
+![License:](https://img.shields.io/github/license/vgavara/monitoring-plugins)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/VGavara/monitoring-plugins?include_prereleases)
 
 # Overview
