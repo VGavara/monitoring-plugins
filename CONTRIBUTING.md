@@ -17,7 +17,7 @@ If you have found a bug the best way of communicating it is by creating a new di
 So you have used the library and missed some feature that would be nice to have. In that case feel free of start a discussion in the [Ideas](https://github.com/VGavara/monitoring-plugins/discussions/categories/ideas) category. Those proposals considered as interesting will be converted into features. Finally they will be programmed to be published in a given release.
 
 ## I just have a question
-Asking questions is also a way of collaboration: some questions are the inspiration of new features that for sure improve the library. If you have a question, just ask it in the Discussions [Questions & Answers](https://github.com/VGavara/monitoring-plugins/categories/questions-answers) category.
+Asking questions is also a way of collaboration: some questions are the inspiration of new features that for sure improve the library. If you have a question, just ask it in the Discussions [Questions & Answers](https://github.com/VGavara/monitoring-plugins/discussions/categories/questions-answers) category.
 
 ## I want to work on a good first issue
 Some existing issues are labelled as "good first issue", meaning that they are a good starting point for begin collaborating in the project. If you have identified such a issue, please contact the repository owner to discuss specific details of the issue before starting coding. In case you didn't have chosen an issue, again contact the repository owner for discussing what could be a your good first issue.
