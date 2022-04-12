@@ -1,14 +1,14 @@
 #!/usr/bin/perl -w
 
-# check_ups_battery_values Nagios Plugin
+# check_ups_battery_values Nagios-compatible plugin
 #
 # Checks the battery values (as defined in RFC1628)
 # on a UPS-MIB SNMP compliant device.
 # Type check_packet_throughput --help for getting more info and examples.
 #
-# This nagios plugin is free software, and comes with ABSOLUTELY NO WARRANTY.
-# It may be used, redistributed and/or modified under the terms of the GNU
-# General Public Licence (see http://www.fsf.org/licensing/licenses/gpl.txt).
+# This check plugin is free software, and comes with ABSOLUTELY NO WARRANTY.
+# It may be used, redistributed and/or modified under the terms of the MIT
+# General Public Licence (see https://opensource.org/licenses/MIT).
 
 # MODULE DECLARATION
 
@@ -43,9 +43,9 @@ use constant BLURB =>
   "Checks the battery values (voltage, current and temperature)\n"
   . "on a RFC1628 (UPS-MIB) SNMP compliant device";
 use constant LICENSE =>
-  "This nagios plugin is free software, and comes with ABSOLUTELY NO WARRANTY\n"
-  . "It may be used, redistributed and/or modified under the terms of the GNU\n"
-  . " General Public Licence (see http://www.fsf.org/licensing/licenses/gpl.txt).\n";
+  "This check plugin is free software, and comes with ABSOLUTELY NO WARRANTY\n"
+  . "It may be used, redistributed and/or modified under the terms of the MIT\n"
+  . " General Public Licence (see https://opensource.org/licenses/MIT).\n";
 use constant EXAMPLE => "\n\n"
   . "Example:\n" . "\n"
   . "check_ups_battery_values -H 192.168.0.101 -w 210:240,,,\\~:40 -c 200:250,,\\~:50\n"
@@ -180,7 +180,7 @@ sub CreateNagiosManager() {
 }
 
 # Checks argument values and sets some default values
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Error description string
 # Return value: True if arguments ok, false if not
 
@@ -279,7 +279,7 @@ sub CheckArguments() {
 }
 
 # Performs whole check:
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Plugin output string
 # Return value: Plugin return value
 
