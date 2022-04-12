@@ -23,7 +23,16 @@ The status ids of a power (extracted from MIB) are:
 - 12: onButInlinePowerFail
 
 
-# USAGE EXAMPLES
+# USAGE
+
+    check_cisco_fru_ps -H <hostname> [-e <power id list>] [-w <warning list> -c <critical list>]
+        [-C <SNMP Community>]  [E <SNMP Version>] [-P <SNMP port>]
+        [-V <version>]
+
+Type `check_cisco_fru_ps --help` for getting more info.
+
+
+# EXAMPLES
 
 ## check_cisco_fru_ps -H 192.168.0.13
 
@@ -35,7 +44,7 @@ Plugin returns OK if it is a CISCO-ENTITY-FRU-CONTROL-MIB compliant device and c
 
 Checks, on a CISCO-ENTITY-FRU-CONTROL-MIB compliant device with IP address  192.168.0.13, if any of the psu passed through their id with the -e argument are in any of the states passed in -w and -c argument. 	
 
-It returns CRITICAL if any power (120 or 121 power id) has a state with id 8, WARNING if any power has a state with id 9 or 12, and in other case returns OK.
+Specifically, it returns CRITICAL if any of the power sources identified as 120 or 121 has an state with id 8 (failed), WARNING if any of them has an state with id 9 (onButFanFail) or 12 (onButInlinePowerFail), and OK in all other cases.
 					
 					
 # HISTORY

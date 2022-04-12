@@ -2,7 +2,7 @@
 
 This plugin checks fans in a CISCO-ENTITY-FRU-CONTROL-MIB compliant device (e.g. Cisco MDS 9000 series). It compares the listed fan states with a fan state identifier list defined for each WARNING and CRITICAL state. If any state of the fans is in any list, plugin returns the related state and a list with the fans involved or OK if not.
 
-Plugin can be run in test mode for both checking if device supports this kind of check and showing a present fan list with id,status and description data.
+Plugin can be run in test mode for both checking if device supports this kind of check and showing a present fan list with id, status and description data.
 
 # STATUS IDENTIFIERS
 
@@ -14,7 +14,15 @@ The status ids of a fan (extracted from MIB) are:
 4. warning
 
 
-# USAGE EXAMPLES
+# USAGE
+
+    check_cisco_fru_fan -H <hostname> [-e <fan id list> -w <warning list>] -c <critical list>]
+        [-C <SNMP Community>]  [E <SNMP Version>] [-P <SNMP port>]
+        [-V <version>]
+
+Type `check_cisco_fru_fan --help` for getting more info.
+
+# EXAMPLES
 
 ## check_cisco_fru_fan -H 192.168.0.12
 

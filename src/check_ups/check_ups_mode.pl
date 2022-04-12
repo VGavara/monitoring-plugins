@@ -1,11 +1,11 @@
 #!/usr/bin/perl
 
-# check_ups_mode Nagios Plugin
+# check_ups_mode Nagios-compatible plugin
 #
-# This nagios plugin is free software, and comes with ABSOLUTELY
+# This check plugin is free software, and comes with ABSOLUTELY
 # NO WARRANTY. It may be used, redistributed and/or modified under
-# the terms of the GNU General Public Licence (see
-# http://www.fsf.org/licensing/licenses/gpl.txt).
+# the terms of the MIT General Public License (see
+# https://opensource.org/licenses/MIT).
 
 # MODULE DECLARATION
 
@@ -47,10 +47,10 @@ use constant BLURB =>
 "This plugin checks working mode (online/bypass/offline with batt. normal, low or depleted)\n"
   . "on a RFC1628 (UPS-MIB) SNMP compliant device returning autonomy values as performance data.";
 use constant LICENSE =>
-  "This nagios plugin is free software, and comes with ABSOLUTELY\n"
+  "This check plugin is free software, and comes with ABSOLUTELY\n"
   . "no WARRANTY. It may be used, redistributed and/or modified under\n"
-  . "the terms of the GNU General Public Licence\n"
-  . "(see http://www.fsf.org/licensing/licenses/gpl.txt).\n";
+  . "the terms of the MIT General Public License\n"
+  . "(see https://opensource.org/licenses/MIT).\n";
 use constant EXAMPLE => "\n\n"
   . "Example:\n" . "\n"
   . "check_ups_mode -H 192.168.0.1 -w 2,5 -c 3,4\n" . "\n"
@@ -197,7 +197,7 @@ sub CreateNagiosManager() {
 }
 
 # Checks argument values and retrieves warning & critical value lists
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Error description string, warning and critical lists
 # Return value: True if arguments ok, false if not
 
@@ -286,7 +286,7 @@ sub ManageArguments() {
 }
 
 # Performs whole check:
-# Input: Nagios Plugin object, warning value list, critical value list
+# Input: Nagios-compatible plugin object, warning value list, critical value list
 # Output: Plugin output string
 # Return value: Plugin return value
 

@@ -1,14 +1,14 @@
 #!/usr/bin/perl -w
 
-# check_cisco_fru_fan Nagios Plugin
+# check_cisco_fru_fan Nagios-compatible plugin
 #
 # Checks the operational state of the fans or fan tray on a
 # CISCO-ENTITY-FRU-CONTROL-MIB  complaint device
 #
-# This nagios plugin is free software, and comes with ABSOLUTELY
+# This check plugin is free software, and comes with ABSOLUTELY
 # NO WARRANTY. It may be used, redistributed and/or modified under
-# the terms of the GNU General Public Licence (see
-# http://www.fsf.org/licensing/licenses/gpl.txt).
+# the terms of the MIT General Public License (see
+# https://opensource.org/licenses/MIT).
 #
 # HISTORY
 #
@@ -58,10 +58,10 @@ use constant BLURB =>
   "This plugin checks the operational state of the fans or fans tray \n"
   . "on a CISCO-ENTITY-FRU-CONTROL-MIB complaint device.";
 use constant LICENSE =>
-  "This nagios plugin is free software, and comes with ABSOLUTELY\n"
+  "This check plugin is free software, and comes with ABSOLUTELY\n"
   . "no WARRANTY. It may be used, redistributed and/or modified under\n"
-  . "the terms of the GNU General Public Licence\n"
-  . "(see http://www.fsf.org/licensing/licenses/gpl.txt).\n";
+  . "the terms of the MIT General Public License\n"
+  . "(see https://opensource.org/licenses/MIT).\n";
 use constant EXAMPLE => "\n\n"
   . "Example:\n"
   . "check_cisco_fru_fan -H 192.168.0.12\n" . "\n"
@@ -198,7 +198,7 @@ sub CreateNagiosManager() {
 }
 
 # Checks argument values and sets some default values
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Error description string
 # Return value: True if arguments ok, false if not
 
@@ -276,7 +276,7 @@ sub CheckArguments() {
 
 # Checks if host supports fans data on CISCO-ENTITY-FRU-CONTROL-MIB .
 # If OK, it returns info about fans
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Test output string
 # Return value: OK if test passed, UNKNOWN if not.
 
@@ -347,7 +347,7 @@ sub TestHost() {
 }
 
 # Performs whole check:
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Plugin output string
 # Return value: Plugin return value
 

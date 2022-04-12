@@ -43,7 +43,16 @@ The status ids of a module (extracted from MIB) are:
 - 23: okButAuthFailed
 
 
-# USAGE EXAMPLES
+# USAGE 
+
+    check_cisco_fru_module -H <hostname> [-e <module id list>] [-w <warning list> -c <critical list>]
+        [-C <SNMP Community>]  [-E <SNMP Version>] [-P <SNMP port>]
+        [-V <version>]
+
+Type `check_cisco_fru_module --help` for getting more info.
+
+
+# EXAMPLES
 
 ## check_cisco_fru_module -H 192.168.0.12
 
@@ -55,7 +64,7 @@ Plugin returns OK if it is a CISCO-ENTITY-FRU-CONTROL-MIB compliant device and c
 
 Checks, on a CISCO-ENTITY-FRU-CONTROL-MIB compliant device with IP address  192.168.0.12, if any of the modules passed through their id with the -e argument are in any of the states passed in -w and -c argument.
 
-It returns CRITICAL if any module (275 or 276 module id) has a state with id 7 (failed), 8 (missing) or 20 (okButPowerOverCritical), WARNING if any module has a state with id 4 (okButDiagFailed) 19 (okButPowerOverWarning) or 23 (okButAuthFailed) and in other case returns 0.
+It returns CRITICAL if any of the modules identified as 275 or 276 has an state with id 7 (failed), 8 (missing) or 20 (okButPowerOverCritical), WARNING if any module has an state with id 4 (okButDiagFailed) 19 (okButPowerOverWarning) or 23 (okButAuthFailed) and OK in all other cases.
 
 
 # HISTORY
