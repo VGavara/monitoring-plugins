@@ -1,11 +1,11 @@
 #!/usr/bin/perl
 
-# check_UPS_alarms Nagios Plugin
+# check_UPS_alarms Nagios-compatible plugin
 #
-# This nagios plugin is free software, and comes with ABSOLUTELY
+# This check plugin is free software, and comes with ABSOLUTELY
 # NO WARRANTY. It may be used, redistributed and/or modified under
-# the terms of the GNU General Public Licence (see
-# http://www.fsf.org/licensing/licenses/gpl.txt).
+# the terms of the MIT General Public License (see
+# https://opensource.org/licenses/MIT).
 
 # MODULE DECLARATION
 
@@ -34,10 +34,10 @@ use constant BLURB =>
   "This plugin checks the active UPS alarms comparing them with\n"
   . "both warning and critical alarm lists.";
 use constant LICENSE =>
-  "This nagios plugin is free software, and comes with ABSOLUTELY\n"
+  "This check plugin is free software, and comes with ABSOLUTELY\n"
   . "no WARRANTY. It may be used, redistributed and/or modified under\n"
-  . "the terms of the GNU General Public Licence\n"
-  . "(see http://www.fsf.org/licensing/licenses/gpl.txt).\n";
+  . "the terms of the MIT General Public License\n"
+  . "(see https://opensource.org/licenses/MIT).\n";
 use constant EXAMPLE => "\n\n"
   . "Example:\n" . "\n"
   . "check_UPS_alarms -H 192.168.0.1 -w 1..4,11 -c 5..10\n" . "\n"
@@ -148,7 +148,7 @@ sub CreateNagiosManager() {
 }
 
 # Checks argument values and sets some default values
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Error description string
 # Return value: True if arguments ok, false if not
 
@@ -249,7 +249,7 @@ sub CheckArguments() {
 }
 
 # Performs whole check:
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Plugin output string
 # Return value: Plugin return value
 

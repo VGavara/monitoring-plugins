@@ -1,15 +1,15 @@
 #!/usr/bin/perl -w
 
-# check_ups_inputs Nagios Plugin
+# check_ups_inputs Nagios-compatible plugin
 #
 # Checks the input levels (frequency, voltage, current and/or power )
 # on a RFC1628 (UPS-MIB) SNMP compliant device
 #
 # Type check_ups_inputs --help for getting more info and examples.
 #
-# This nagios plugin is free software, and comes with ABSOLUTELY NO WARRANTY.
-# It may be used, redistributed and/or modified under the terms of the GNU
-# General Public Licence (see http://www.fsf.org/licensing/licenses/gpl.txt).
+# This check plugin is free software, and comes with ABSOLUTELY NO WARRANTY.
+# It may be used, redistributed and/or modified under the terms of the MIT
+# General Public Licence (see https://opensource.org/licenses/MIT).
 
 # MODULE DECLARATION
 
@@ -42,12 +42,12 @@ use constant USAGE => "Usage:\n"
   . "\t\t[-C <SNMP Community>] [-E <SNMP Version>] [-P <SNMP port>] [-t <SNMP timeout>]\n"
   . "\t\t[-V <version>]\n";
 use constant BLURB =>
-  "Checks the input levels (frequency, voltage, current and/or power )\n"
+  "Checks the input levels (frequency, voltage, current and/or power)\n"
   . "on a RFC1628 (UPS-MIB) SNMP compliant device";
 use constant LICENSE =>
-  "This nagios plugin is free software, and comes with ABSOLUTELY NO WARRANTY\n"
-  . "It may be used, redistributed and/or modified under the terms of the GNU\n"
-  . " General Public Licence (see http://www.fsf.org/licensing/licenses/gpl.txt).\n";
+  "This check plugin is free software, and comes with ABSOLUTELY NO WARRANTY\n"
+  . "It may be used, redistributed and/or modified under the terms of the MIT\n"
+  . " General Public Licence (see https://opensource.org/licenses/MIT).\n";
 use constant EXAMPLE => "\n\n"
   . "Example:\n" . "\n"
   . "check_ups_inputs -H 192.168.0.101 -i 1,2,3 -w ,210:240,,\\~:3000 -c ,200:250,,\\~:4000\n"
@@ -187,7 +187,7 @@ sub CreateNagiosManager() {
 }
 
 # Checks argument values and sets some default values
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Error description string
 # Return value: True if arguments ok, false if not
 
@@ -264,7 +264,7 @@ sub CheckArguments() {
 }
 
 # Performs whole check:
-# Input: Nagios Plugin object
+# Input: Nagios-compatible plugin object
 # Output: Plugin output string
 # Return value: Plugin return value
 
