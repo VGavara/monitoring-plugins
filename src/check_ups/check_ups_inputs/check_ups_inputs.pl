@@ -42,7 +42,7 @@ use constant USAGE => "Usage:\n"
   . "\t\t[-C <SNMP Community>] [-E <SNMP Version>] [-P <SNMP port>] [-t <SNMP timeout>]\n"
   . "\t\t[-V <version>]\n";
 use constant BLURB =>
-  "Checks the input levels (frequency, voltage, current and/or power )\n"
+  "Checks the input levels (frequency, voltage, current and/or power)\n"
   . "on a RFC1628 (UPS-MIB) SNMP compliant device";
 use constant LICENSE =>
   "This check plugin is free software, and comes with ABSOLUTELY NO WARRANTY\n"
