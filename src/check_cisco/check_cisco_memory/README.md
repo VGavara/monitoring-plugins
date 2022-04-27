@@ -1,6 +1,6 @@
 # check_cisco_memory
 
-Checks the used and fragmented memory  on a CISCO_MEMORY_POOL_MIB SNMP compliant device.
+Checks the used and fragmented memory on a CISCO_MEMORY_POOL_MIB SNMP compliant device.
 
 # Usage
 
